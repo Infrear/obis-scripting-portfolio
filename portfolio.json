@@ -1,0 +1,99 @@
+{
+  "profile": {
+    "name": "OBI",
+    "handle": "infrar.",
+    "title": "EXPERIENCED PROGRAMMER & BLENDER ANIMATOR",
+    "bio": "I am a student-athlete and an experienced developer with 9 years of specific expertise in ROBLOX Lua. Beyond Lua, I have extensive programming experience in Java, C#, Python, and F#. I've worked on high-impact projects, including developing 'Metanoia' (a Top 5% grossing game), and I have a strong background in competitive robotics (FTC). Whether I'm in class, at practice, or traveling, I'm always building.",
+    "stats": [
+      { "label": "LUA EXPERTISE", "value": "9 YEARS" },
+      { "label": "KEY GAME", "value": "METANOIA (TOP 5%)" },
+      { "label": "ROBOTICS", "value": "FTC COMPETITION" },
+      { "label": "LANGUAGES", "value": "LUA, C#, JAVA, PYTHON, F#" }
+    ],
+    "resumeUrl": "./assets/references/Job Resume.pdf",
+    "socials": [
+      { "platform": "DISCORD", "value": "infrar.", "icon": "discord", "url": "https://discord.com" },
+      { "platform": "EMAIL", "value": "obfrared@gmail.com", "icon": "mail", "url": "mailto:obfrared@gmail.com" },
+      { "platform": "ROBLOX", "value": "dafferrelic842_dev", "icon": "gamepad", "url": "https://www.roblox.com/users/dafferrelic842_dev/profile" },
+      { "platform": "GITHUB", "value": "Infrear", "icon": "github", "url": "https://github.com/Infrear" },
+      { "platform": "TWITTER / X", "value": "@Infrar4", "icon": "twitter", "url": "https://twitter.com/Infrar4" }
+    ]
+  },
+  "videos": [
+    {
+      "id": "vid-metanoia",
+      "title": "METANOIA - TOP 5% GROSSING GAME",
+      "category": "ROBLOX LUA / GAME ARCHITECTURE",
+      "description": "High-impact Roblox game project featuring modular netcode, optimized framework architecture, custom combat replication, and dynamic spatial HUD systems.",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "poster": "./assets/zigzag background.png",
+      "frameStyle": "frame1",
+      "themeColor": "#E60012",
+      "x": 6,
+      "y": 14,
+      "rotation": -5,
+      "zIndex": 10,
+      "tags": ["ROBLOX LUA", "NETCODE", "TOP 5% GROSSING", "COMBAT ENGINE"]
+    },
+    {
+      "id": "vid-blender",
+      "title": "BLENDER 3D COMBAT REEL",
+      "category": "BLENDER / CINEMATIC RIGGING",
+      "description": "Hyper-stylized character motion, keyframed attacks, dynamic camera framing, and custom particle effect timing designed for seamless game engine import.",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+      "poster": "./assets/zigzag background.png",
+      "frameStyle": "frame2",
+      "themeColor": "#111111",
+      "x": 48,
+      "y": 10,
+      "rotation": 6,
+      "zIndex": 12,
+      "tags": ["BLENDER", "3D ANIMATION", "RIGGING", "PARTICLES"]
+    },
+    {
+      "id": "vid-robotics",
+      "title": "FTC COMPETITION ROBOTICS CONTROL",
+      "category": "FTC ROBOTICS / JAVA & C#",
+      "description": "Autonomous trajectory math, PID closed-loop feedback motor tuning, real-time sensor processing, and custom tele-operated drivers built for FTC robotics.",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+      "poster": "./assets/zigzag background.png",
+      "frameStyle": "frame1",
+      "themeColor": "#E60012",
+      "x": 18,
+      "y": 48,
+      "rotation": -4,
+      "zIndex": 14,
+      "tags": ["FTC ROBOTICS", "JAVA", "PID TUNING", "HARDWARE CONTROL"]
+    },
+    {
+      "id": "vid-uisystems",
+      "title": "PERSONA-INSPIRED SPATIAL UI ENGINE",
+      "category": "ROBLOX LUA / INTERACTIVE FRONTEND",
+      "description": "Custom client-side UI rendering engine supporting spring-physics motion, dynamic screen slashes, angled masked containers, and custom canvas positioning.",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+      "poster": "./assets/zigzag background.png",
+      "frameStyle": "frame2",
+      "themeColor": "#FFFFFF",
+      "x": 62,
+      "y": 42,
+      "rotation": 7,
+      "zIndex": 11,
+      "tags": ["ROBLOX UI", "SPRING PHYSICS", "SPATIAL CANVAS", "LUA ENGINE"]
+    },
+    {
+      "id": "vid-pipelinetools",
+      "title": "AUTOMATED BUILD & ASSET PIPELINE",
+      "category": "PYTHON / C# / AUTOMATION",
+      "description": "Tooling scripts for automated asset compression, map data serialization, build validation, and Roblox model syncing across multi-developer teams.",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+      "poster": "./assets/zigzag background.png",
+      "frameStyle": "frame1",
+      "themeColor": "#E60012",
+      "x": 38,
+      "y": 74,
+      "rotation": -3,
+      "zIndex": 15,
+      "tags": ["PYTHON", "C#", "ASSET PIPELINES", "AUTOMATION"]
+    }
+  ]
+}
