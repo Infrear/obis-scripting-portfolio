@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Persona Aura';
+  src: url('/assets/persona_font/Persona Aura.otf') format('opentype'),
+       url('./assets/persona_font/Persona Aura.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Persona Aura', 'Arial Black', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0b0b0b;
+  color: #ffffff;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Custom Persona Slanted Text & Containers */
+.persona-slant-left {
+  transform: skewX(-12deg);
+}
+
+.persona-slant-right {
+  transform: skewX(12deg);
+}
+
+.persona-box-shadow {
+  box-shadow: 8px 8px 0px #E60012, -4px -4px 0px #000000;
+}
+
+.persona-box-shadow-dark {
+  box-shadow: 10px 10px 0px #111111, 4px 4px 0px #E60012;
+}
+
+/* Jagged Frame Mask Utilities */
+.persona-mask-1 {
+  clip-path: polygon(0% 4%, 96% 0%, 100% 92%, 4% 100%, 0% 95%);
+}
+
+.persona-mask-2 {
+  clip-path: polygon(4% 0%, 100% 5%, 95% 98%, 0% 92%);
+}
+
+.persona-card-cutout {
+  clip-path: polygon(0 0, 100% 2%, 96% 96%, 2% 100%);
+}
+
+/* Custom Scrollbar for modals */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+::-webkit-scrollbar-thumb {
+  background: #E60012;
+  border-radius: 2px;
+}
