@@ -62,16 +62,3 @@ body {
   background: #E60012;
   border-radius: 2px;
 }
-
-/* Hat Sprite Animation */
-.hat-sprite {
-  background-image: url('./new-assets/spritesheet for take your time hat loading screen.png'), url('/new-assets/spritesheet for take your time hat loading screen.png');
-  background-size: 1000% 100%; /* 10 frames horizontally */
-  background-repeat: no-repeat;
-  animation: play-hat 1s steps(10) infinite;
-}
-
-@keyframes play-hat {
-  from { background-position: 0 0; }
-  to { background-position: -1000% 0; }
-}
