@@ -95,5 +95,93 @@
       "zIndex": 15,
       "tags": ["PYTHON", "C#", "ASSET PIPELINES", "AUTOMATION"]
     }
+  ],
+  "experiences": [
+    {
+      "id": "exp-metanoia",
+      "title": "METANOIA",
+      "role": "HEAD PROGRAMMER / CORE DEVELOPER",
+      "dates": "In Development",
+      "description": "Developed highly optimized, object-oriented systems for a Top 5% grossing game.",
+      "storeIcon": "./new-assets/past-experience-images/metanoia/store-icon.png",
+      "inGameImage": "./new-assets/past-experience-images/metanoia/ingame-image.png",
+      "promoImages": [],
+      "promoVideo": "./new-assets/past-experience-images/metanoia/promotional-video.mp4"
+    },
+    {
+      "id": "exp-main-1",
+      "title": "MAIN EXPERIENCE: PART 1",
+      "role": "PROGRAMMER",
+      "dates": "Jun 2013 - Present",
+      "description": "Advanced pathfinding (over/underwater), mob A.I. Server-to-server joining/creation (style of Minecraft/Ark). Stat systems, inventories, and complex combat mechanics. Character creation, taming systems with saves, and custom skinned creatures.",
+      "storeIcon": "./assets/starwithcircle.png",
+      "inGameImage": "./assets/zigzag background.png",
+      "promoImages": [],
+      "promoVideo": null
+    },
+    {
+      "id": "exp-main-2",
+      "title": "MAIN EXPERIENCE: PART 2",
+      "role": "PROGRAMMER",
+      "dates": "Jun 2013 - Present",
+      "description": "Magic, utility enchantments, potions. Structures and vehicles. Procedural world generation with difficulty modes and animal health sensitivity.",
+      "storeIcon": "./assets/starwithoutline.png",
+      "inGameImage": "./assets/irregular zigzag.png",
+      "promoImages": [],
+      "promoVideo": null
+    },
+    {
+      "id": "exp-ztf",
+      "title": "ZTF: RELOADED",
+      "role": "PROGRAMMER",
+      "dates": "Apr 2020 - Jan 2022",
+      "description": "Main programmer for zombie effects, crate animation sequences, and UI effects.",
+      "storeIcon": "./new-assets/past-experience-images/zombie-task-force/store-icon.png",
+      "inGameImage": "./new-assets/past-experience-images/zombie-task-force/in-game-image.png",
+      "promoImages": [
+        "./new-assets/past-experience-images/zombie-task-force/promotional-image-1.png",
+        "./new-assets/past-experience-images/zombie-task-force/promotional-image-2.png",
+        "./new-assets/past-experience-images/zombie-task-force/promotional-image-3.png",
+        "./new-assets/past-experience-images/zombie-task-force/promotional-image-4.png"
+      ],
+      "promoVideo": null
+    },
+    {
+      "id": "exp-lava-java",
+      "title": "LAVA JAVA CAFE",
+      "role": "PROGRAMMER",
+      "dates": "Sep 2021 - Oct 2021",
+      "description": "Scripted a cooking system and custom camera manipulation.",
+      "storeIcon": "./new-assets/past-experience-images/lava-java-cafe/store-icon.png",
+      "inGameImage": "./new-assets/past-experience-images/lava-java-cafe/ingame-image.png",
+      "promoImages": [
+        "./new-assets/past-experience-images/lava-java-cafe/promotional-image-1.png"
+      ],
+      "promoVideo": null
+    },
+    {
+      "id": "exp-crystalgea",
+      "title": "CRYSTALGEA",
+      "role": "HEAD PROGRAMMER",
+      "dates": "Oct 2018 - Mar 2019",
+      "description": "Scripted survival animal AI logic, inventories, and procedural cave mineral/resource spawning math.",
+      "storeIcon": "./new-assets/past-experience-images/crystalgea/store-icon.png",
+      "inGameImage": "./new-assets/past-experience-images/crystalgea/ingame-image.png",
+      "promoImages": [
+        "./new-assets/past-experience-images/crystalgea/promotional-image-1.png"
+      ],
+      "promoVideo": null
+    },
+    {
+      "id": "exp-sky-imagination",
+      "title": "SKY IMAGINATION STUDIOS",
+      "role": "LEAD DEVELOPER",
+      "dates": "2018 - 2019",
+      "description": "Led development efforts for Crystalgea and managed studio programming pipelines.",
+      "storeIcon": "./new-assets/past-experience-images/sky-imagination-studios/Sky imagination Studios Logo.png",
+      "inGameImage": "./new-assets/past-experience-images/sky-imagination-studios/Sky imagination Studios Logo.png",
+      "promoImages": [],
+      "promoVideo": null
+    }
   ]
 }
