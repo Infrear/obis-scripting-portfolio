@@ -13,6 +13,15 @@ export default function PersonaCursor() {
   const trailX = useSpring(mouseX, springConfig);
   const trailY = useSpring(mouseY, springConfig);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   useEffect(() => {
     const handleMouseMove = (e) => {
       mouseX.set(e.clientX);
@@ -38,6 +47,8 @@ export default function PersonaCursor() {
     };
   }, [mouseX, mouseY]);
 
+  if (isMobile) return null;
+
   return (
     <div className="pointer-events-none fixed inset-0 z-[9999] overflow-hidden">
       {/* Outer Trailing Star Accent */}
@@ -53,7 +64,7 @@ export default function PersonaCursor() {
           rotate: isHovered ? 45 : 0,
         }}
         transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-        className="absolute w-12 h-12 flex items-center justify-center opacity-80"
+        className="absolute w-12 h-12 hidden md:flex items-center justify-center opacity-80"
       >
         <img
           src="./assets/starwithcircle.png"

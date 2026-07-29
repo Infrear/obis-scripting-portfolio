@@ -58,7 +58,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-[#0b0b0b] text-white font-persona select-none">
+    <div className="relative w-screen h-[100dvh] overflow-hidden bg-[#0b0b0b] text-white font-persona select-none">
       {/* Custom Trailing Persona Cursor */}
       <PersonaCursor />
 
@@ -86,10 +86,11 @@ export default function App() {
       )}
 
       {/* Content Views (Past Work / Experiences) */}
+      {/* Content Views (Past Work / Experiences) */}
       {(currentView === 'past-work' || currentView === 'experiences') && (
-        <>
+        <div className="flex flex-col w-full h-full absolute inset-0">
           {/* Top Header Title Cutout */}
-          <header className="relative z-30 pt-3 px-4 md:px-8">
+          <header className="relative z-30 pt-3 px-4 md:px-8 shrink-0">
             <TitleCutout onTitleClick={() => navigateTo('title')} />
           </header>
           
@@ -97,7 +98,7 @@ export default function App() {
           <FloatingNavArrows onBack={() => navigateTo('title')} />
 
           {/* Main Content Area */}
-          <main className="relative z-10 w-full h-full">
+          <main className="relative z-10 w-full flex-1 overflow-hidden">
             {currentView === 'past-work' && portfolioData && portfolioData.videos && (
               <SpatialCanvas
                 videos={portfolioData.videos}
@@ -111,7 +112,7 @@ export default function App() {
               />
             )}
           </main>
-        </>
+        </div>
       )}
 
       {/* Fullscreen Video Player Modal */}

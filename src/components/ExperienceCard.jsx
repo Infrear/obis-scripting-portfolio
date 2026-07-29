@@ -47,7 +47,7 @@ export default function ExperienceCard({ experience, isActive }) {
       animate={{ opacity: 1, x: 0, rotate: 0 }}
       exit={{ opacity: 0, x: -100, rotate: -5 }}
       transition={{ type: 'spring', stiffness: 200, damping: 20 }}
-      className="relative w-[90vw] max-w-4xl bg-black border-4 border-white shadow-[12px_12px_0px_#E60012] p-4 md:p-6 flex flex-col md:flex-row gap-6 transform -skew-x-2"
+      className="relative w-[min(75vw,150dvh)] max-w-5xl max-h-full overflow-y-auto overflow-x-hidden bg-black border-2 md:border-4 border-white shadow-[6px_6px_0px_#E60012] md:shadow-[12px_12px_0px_#E60012] p-3 md:p-6 flex flex-col md:flex-row gap-4 md:gap-6 transform -skew-x-2"
     >
       {/* Left side: Media Carousel */}
       <div className="relative w-full md:w-1/2 aspect-video bg-[#111] border-2 border-[#E60012] persona-mask-1 overflow-hidden group">
@@ -109,35 +109,35 @@ export default function ExperienceCard({ experience, isActive }) {
       {/* Right side: Details */}
       <div className="relative w-full md:w-1/2 flex flex-col justify-between">
         <div>
-          <div className="flex items-start gap-4 mb-4">
+          <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
             {/* Store Icon */}
             {experience.storeIcon && (
-              <div className="w-16 h-16 shrink-0 bg-white border-2 border-black p-1 transform rotate-3 shadow-[2px_2px_0px_#E60012]">
+              <div className="w-10 h-10 md:w-16 md:h-16 shrink-0 bg-white border-2 border-black p-0.5 md:p-1 transform rotate-3 shadow-[2px_2px_0px_#E60012]">
                 <img src={experience.storeIcon} alt="Icon" className="w-full h-full object-contain" />
               </div>
             )}
             <div>
-              <h2 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tighter" style={{ fontFamily: "'Persona Aura', sans-serif" }}>
+              <h2 className="text-lg md:text-3xl font-black text-white uppercase tracking-tighter" style={{ fontFamily: "'Persona Aura', sans-serif" }}>
                 {experience.title}
               </h2>
-              <h3 className="text-[#E60012] font-bold text-sm tracking-widest uppercase">
+              <h3 className="text-[#E60012] font-bold text-[10px] md:text-sm tracking-widest uppercase">
                 {experience.role}
               </h3>
             </div>
           </div>
 
-          <div className="bg-[#1a1a1a] p-4 border-l-4 border-[#E60012] shadow-[4px_4px_0px_#000] mb-4">
-            <span className="inline-block bg-[#E60012] text-white text-[10px] font-bold px-2 py-0.5 mb-2 uppercase tracking-widest border border-white">
+          <div className="bg-[#1a1a1a] p-3 md:p-4 border-l-4 border-[#E60012] shadow-[4px_4px_0px_#000] mb-2 md:mb-4">
+            <span className="inline-block bg-[#E60012] text-white text-[8px] md:text-[10px] font-bold px-1.5 md:px-2 py-0.5 mb-1 md:mb-2 uppercase tracking-widest border border-white">
               {experience.dates}
             </span>
-            <p className="text-white/90 text-sm leading-relaxed">
+            <p className="text-white/90 text-xs md:text-sm leading-relaxed">
               {experience.description}
             </p>
           </div>
         </div>
-        
+
         {/* Decorative elements */}
-        <div className="self-end text-white/20 font-black text-6xl transform rotate-12 select-none pointer-events-none absolute -bottom-8 -right-4">
+        <div className="self-end text-white/20 font-black text-4xl md:text-6xl transform rotate-12 select-none pointer-events-none absolute -bottom-4 md:-bottom-8 -right-2 md:-right-4">
           ★
         </div>
       </div>

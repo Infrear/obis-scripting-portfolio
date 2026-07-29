@@ -6,10 +6,19 @@ export default function PersonaVideoCard({
   video,
   activeZIndex,
   onBringToFront,
-  onOpenVideo
+  onOpenVideo,
+  canvasRef
 }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [isDraggable, setIsDraggable] = useState(true);
   const videoRef = useRef(null);
+
+  React.useEffect(() => {
+    const handleResize = () => setIsDraggable(window.innerWidth >= 768);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const frameAsset = video.frameStyle === 'frame2'
     ? './assets/persona frame 2.png'
@@ -18,7 +27,7 @@ export default function PersonaVideoCard({
   const handleMouseEnter = () => {
     setIsHovered(true);
     if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
+      videoRef.current.play().catch(() => { });
     }
   };
 
@@ -31,29 +40,27 @@ export default function PersonaVideoCard({
 
   return (
     <motion.div
-      drag
-      dragConstraints={{ left: -400, right: 400, top: -300, bottom: 300 }}
+      drag={isDraggable}
+      dragConstraints={canvasRef}
       dragElastic={0.1}
-      whileDrag={{ scale: 1.06, rotate: 0 }}
-      onDragStart={() => onBringToFront(video.id)}
-      onMouseDown={() => onBringToFront(video.id)}
+      whileDrag={isDraggable ? { scale: 1.06, rotate: 0 } : {}}
+      onDragStart={() => isDraggable && onBringToFront(video.id)}
+      onMouseDown={() => isDraggable && onBringToFront(video.id)}
       initial={{ opacity: 0, scale: 0.8, rotate: video.rotation || 0 }}
       animate={{ opacity: 1, scale: 1, rotate: isHovered ? 0 : video.rotation || 0 }}
       transition={{ type: 'spring', stiffness: 260, damping: 20 }}
       style={{
-        position: 'absolute',
-        left: `${video.x}%`,
-        top: `${video.y}%`,
+        '--md-left': `${video.x}%`,
+        '--md-top': `${video.y}%`,
+        width: 'clamp(200px, 22vw, 380px)',
         zIndex: activeZIndex,
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="interactive-card cursor-grab active:cursor-grabbing w-[310px] md:w-[380px] group select-none"
+      className={`interactive-card ${isDraggable ? 'cursor-grab active:cursor-grabbing' : ''} group select-none relative md:absolute md:left-[var(--md-left)] md:top-[var(--md-top)]`}
     >
-      {/* Persona Stylized Outer Container */}
       <div className="relative p-2 rounded-sm bg-black/90 border-2 border-white/20 shadow-[10px_10px_0px_#000000] hover:shadow-[14px_14px_0px_#E60012] transition-all duration-300 transform -skew-x-2">
-        
-        {/* Jagged Frame Overlay Asset */}
+
         <div className="absolute -inset-3 pointer-events-none z-20 opacity-90 transition-transform group-hover:scale-105">
           <img
             src={frameAsset}
@@ -63,7 +70,6 @@ export default function PersonaVideoCard({
           />
         </div>
 
-        {/* Top Header Tag */}
         <div className="flex items-center justify-between bg-[#111111] px-3 py-1 mb-2 border-b-2 border-[#E60012]">
           <span className="text-[#E60012] text-xs font-bold tracking-widest uppercase flex items-center gap-1">
             <Tag className="w-3 h-3" /> {video.category}
@@ -73,10 +79,9 @@ export default function PersonaVideoCard({
           </span>
         </div>
 
-        {/* Video Preview Viewport */}
         <div
           onClick={() => onOpenVideo(video)}
-          className="relative w-full h-[180px] md:h-[210px] bg-black overflow-hidden cursor-pointer persona-mask-1 border-2 border-[#111]"
+          className="relative w-full aspect-video bg-black overflow-hidden cursor-pointer persona-mask-1 border-2 border-[#111]"
         >
           <video
             ref={videoRef}
@@ -88,10 +93,8 @@ export default function PersonaVideoCard({
             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 filter brightness-90 contrast-110"
           />
 
-          {/* Persona Dark Red Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-80 group-hover:opacity-40 transition-opacity" />
 
-          {/* Hover Play Button Trigger */}
           <div className="absolute inset-0 flex items-center justify-center">
             <motion.div
               animate={{ scale: isHovered ? [1, 1.25, 1] : 1 }}
@@ -102,7 +105,6 @@ export default function PersonaVideoCard({
             </motion.div>
           </div>
 
-          {/* Title Banner Cutout */}
           <div className="absolute bottom-2 left-2 right-2 bg-black/90 p-2 border-l-4 border-[#E60012] transform -skew-x-3">
             <h3
               className="text-white text-base md:text-lg font-black tracking-tight line-clamp-1 group-hover:text-[#E60012] transition-colors"
@@ -113,7 +115,6 @@ export default function PersonaVideoCard({
           </div>
         </div>
 
-        {/* Card Footer Info */}
         <div className="mt-3 px-2 flex flex-wrap items-center justify-between gap-1">
           <div className="flex flex-wrap gap-1">
             {video.tags?.slice(0, 3).map((tag, idx) => (

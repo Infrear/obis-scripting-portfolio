@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import PersonaVideoCard from './PersonaVideoCard';
 
 export default function SpatialCanvas({ videos, onOpenVideo }) {
-  // Map of video ID to its active z-index
+  const canvasRef = useRef(null);
+
   const [zIndices, setZIndices] = useState(() => {
     const initialMap = {};
     videos.forEach((v, idx) => {
@@ -14,7 +15,6 @@ export default function SpatialCanvas({ videos, onOpenVideo }) {
 
   const [maxZ, setMaxZ] = useState(100);
 
-  // Bring clicked/dragged video card to absolute front
   const handleBringToFront = (id) => {
     setMaxZ((prevMax) => {
       const nextZ = prevMax + 1;
@@ -27,10 +27,10 @@ export default function SpatialCanvas({ videos, onOpenVideo }) {
   };
 
   return (
-    <div className="relative w-full h-[calc(100vh-140px)] overflow-hidden">
-      {/* Dynamic Free-form Canvas Grid Container */}
+    <div className="relative w-full h-full overflow-y-auto md:overflow-hidden overflow-x-hidden pt-4 pb-32 md:p-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       <motion.div
-        className="relative w-full h-full"
+        ref={canvasRef}
+        className="relative w-full min-h-max md:h-full flex flex-col md:block items-center gap-8 md:gap-0"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
@@ -42,15 +42,14 @@ export default function SpatialCanvas({ videos, onOpenVideo }) {
             activeZIndex={zIndices[video.id] || 10}
             onBringToFront={handleBringToFront}
             onOpenVideo={onOpenVideo}
+            canvasRef={canvasRef}
           />
         ))}
       </motion.div>
 
-      {/* Spatial Canvas Controls & Persona Sub-Banner */}
-      <div className="absolute bottom-4 left-6 z-40 pointer-events-auto flex items-center gap-3">
+      <div className="absolute bottom-4 left-6 z-40 pointer-events-auto hidden md:flex items-center gap-3">
         <div className="bg-black/90 border-2 border-[#E60012] px-4 py-2 text-white font-bold text-xs md:text-sm tracking-widest uppercase transform -skew-x-6 shadow-[4px_4px_0px_#000000] flex items-center gap-2">
-          <span className="w-2.5 h-2.5 bg-[#E60012] rounded-full animate-pulse" />
-          <span>FREE-FORM SPATIAL CANVAS // DRAG & EXPLORE CARDS</span>
+          <span>explore video collection!</span>
         </div>
       </div>
     </div>

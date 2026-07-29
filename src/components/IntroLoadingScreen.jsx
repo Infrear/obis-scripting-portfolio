@@ -106,20 +106,22 @@ export default function IntroLoadingScreen({ onComplete }) {
 
         {/* Bottom Anchored City Silhouette */}
         <motion.div
-          initial={{ y: 1000, scale: 1.1, opacity: 0 }}
-          // To move the city DOWN, increase the 'y' value in animate (e.g., y: 100). 
-          // To zoom it OUT (make it smaller), decrease the 'scale' value (e.g., scale: 0.8).
-          animate={{ y: 850, scale: 1, opacity: 1 }}
+          initial={{ y: "100%", opacity: 0 }}
+          animate={{ y: "0%", opacity: 0.9 }}
           transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
-          className="absolute bottom-0 left-0 w-full z-0 pointer-events-none"
+
+          className="absolute bottom-0 left-0 w-screen h-[65vh] z-0 pointer-events-none"
         >
           <img
             src="./new-assets/city-silhouette-new.png"
             alt="City Silhouette"
-            className="w-full h-auto object-cover opacity-90 filter drop-shadow-[0_-5px_15px_rgba(0,0,0,0.8)]"
+
+            className="w-full h-full object-cover filter drop-shadow-[0_-5px_15px_rgba(0,0,0,0.8)]"
             onError={(e) => { e.target.style.display = 'none'; }}
           />
         </motion.div>
+
+
       </motion.div>
     </AnimatePresence>
   );
