@@ -27,10 +27,10 @@ export default function SpatialCanvas({ videos, onOpenVideo }) {
   };
 
   return (
-    <div className="relative w-full h-full overflow-y-auto md:overflow-hidden overflow-x-hidden pt-4 pb-32 md:p-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+    <div className="relative w-full h-full overflow-y-auto overflow-x-hidden pt-4 pb-32 md:p-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       <motion.div
         ref={canvasRef}
-        className="relative w-full min-h-max md:h-full flex flex-col md:block items-center gap-8 md:gap-0"
+        className="relative w-full min-h-max md:min-h-[140vh] md:block flex flex-col items-center gap-8 md:gap-0"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
@@ -47,7 +47,7 @@ export default function SpatialCanvas({ videos, onOpenVideo }) {
         ))}
       </motion.div>
 
-      <div className="absolute bottom-4 left-6 z-40 pointer-events-auto hidden md:flex items-center gap-3">
+      <div className="sticky bottom-4 left-6 z-40 pointer-events-auto hidden md:inline-flex items-center gap-3 ml-6">
         <div className="bg-black/90 border-2 border-[#E60012] px-4 py-2 text-white font-bold text-xs md:text-sm tracking-widest uppercase transform -skew-x-6 shadow-[4px_4px_0px_#000000] flex items-center gap-2">
           <span>explore video collection!</span>
         </div>

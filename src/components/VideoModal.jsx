@@ -38,7 +38,7 @@ export default function VideoModal({ video, isOpen, onClose }) {
   return (
     <AnimatePresence>
       <div className="fixed inset-0 z-[9500] flex items-center justify-center p-4 md:p-8 bg-black/90 backdrop-blur-lg">
-        
+
         {/* Fullscreen Backdrop Trigger */}
         <div className="absolute inset-0" onClick={onClose} />
 
@@ -48,7 +48,7 @@ export default function VideoModal({ video, isOpen, onClose }) {
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           exit={{ opacity: 0, scale: 0.8, rotate: -4 }}
           transition={{ type: 'spring', stiffness: 200, damping: 20 }}
-          className="relative w-full max-w-5xl bg-[#0e0e0e] border-4 border-[#E60012] p-4 md:p-8 shadow-[20px_20px_0px_#000000] z-10 transform -skew-x-2"
+          className="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto bg-[#0e0e0e] border-4 border-[#E60012] p-4 md:p-8 shadow-[20px_20px_0px_#000000] z-10 transform -skew-x-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {/* Top Title Bar */}
           <div className="flex items-center justify-between bg-[#111] p-3 border-b-4 border-[#E60012] mb-4">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, memo } from 'react';
 import { motion } from 'framer-motion';
 
 // Mapping letter indices for individual PNG image font
@@ -27,12 +27,20 @@ const LETTER_IMAGES = [
   'fontbolt (21).png'
 ];
 
-export default function TitleCutout({ onTitleClick }) {
+const TitleCutout = memo(function TitleCutout({ onTitleClick }) {
   const words = [
     { text: "OBI'S", color: "bg-[#E60012] text-white" },
     { text: "SCRIPTING", color: "bg-white text-black" },
     { text: "PORTFOLIO", color: "bg-[#111111] text-white border-2 border-[#E60012]" }
   ];
+
+  // preload all letter accent PNGs on mount so first hover doesn't stall
+  useEffect(() => {
+    LETTER_IMAGES.forEach((fileName) => {
+      const img = new Image();
+      img.src = `./assets/obis scripting portfolio persona style image font/${fileName}`;
+    });
+  }, []);
 
   return (
     <motion.div
@@ -64,7 +72,7 @@ export default function TitleCutout({ onTitleClick }) {
                     rotate: { duration: 3 + (charIdx % 3), repeat: Infinity, ease: 'easeInOut' },
                     y: { duration: 2 + (charIdx % 2), repeat: Infinity, ease: 'easeInOut' }
                   }}
-                  className="relative inline-flex items-center justify-center p-0.5 md:p-1"
+                  className="relative inline-flex items-center justify-center p-0.5 md:p-1 will-change-transform"
                 >
                   {/* Persona High-Contrast Angled Box */}
                   <div
@@ -105,4 +113,6 @@ export default function TitleCutout({ onTitleClick }) {
       </motion.div>
     </motion.div>
   );
-}
+});
+
+export default TitleCutout;
