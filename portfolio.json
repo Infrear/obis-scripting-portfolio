@@ -2,137 +2,418 @@
   "profile": {
     "name": "OBI",
     "handle": "infrar.",
-    "title": "EXPERIENCED PROGRAMMER & BLENDER ANIMATOR",
-    "bio": "I am a student-athlete and an experienced developer with 9 years of specific expertise in ROBLOX Lua. Beyond Lua, I have extensive programming experience in Java, C#, Python, and F#. I've worked on high-impact projects, including developing 'Metanoia' (a Top 5% grossing game), and I have a strong background in competitive robotics (FTC). Whether I'm in class, at practice, or traveling, I'm always building.",
+    "title": "FULLSTACK SOFTWARE ENGINEER & ANIMATOR",
+    "bio": "I am an 18 year old student-athlete studying for my bs in cs and bioengineering at UMass Amherst, and an experienced developer with 9 years of specific expertise in ROBLOX Lua. Beyond Lua, I have extensive programming experience in Java, C#, Python, JS, and F#. I've worked on high-impact projects, including developing 'Metanoia' and Zombie Task Force (which reached 5.3M+ visits), and I have a strong background in competitive cs through numerous hackathons, including hackMIT, and game dev. My accolades include being the winner of the 2024 Congressional App Challenge in Massachussetts & a third place finish at HackMIT Blueprint.",
     "stats": [
-      { "label": "LUA EXPERTISE", "value": "9 YEARS" },
-      { "label": "KEY GAME", "value": "METANOIA (TOP 5%)" },
-      { "label": "ROBOTICS", "value": "FTC COMPETITION" },
-      { "label": "LANGUAGES", "value": "LUA, C#, JAVA, PYTHON, F#" }
+      {
+        "label": "PROGRAMMING EXPERIENCE",
+        "value": "10 YEARS"
+      },
+      {
+        "label": "TIME ZONE",
+        "value": "EST"
+      },
+      {
+        "label": "SKILLS",
+        "value": "FRONTEND & BACKEND PROGRAMMING, ML/AI, ANIMATION, GUI DESIGN, WEB & MOBILE APP DEVELOPMENT, ROJO"
+      },
+      {
+        "label": "MOST PROFICIENT LANGUAGES",
+        "value": "LUA, C#, JAVA, PYTHON, F#, JS"
+      }
     ],
     "resumeUrl": "./assets/references/Job Resume.pdf",
     "socials": [
-      { "platform": "DISCORD", "value": "infrar.", "icon": "discord", "url": "https://discord.com" },
-      { "platform": "EMAIL", "value": "obfrared@gmail.com", "icon": "mail", "url": "mailto:obfrared@gmail.com" },
-      { "platform": "ROBLOX", "value": "dafferrelic842_dev", "icon": "gamepad", "url": "https://www.roblox.com/users/dafferrelic842_dev/profile" },
-      { "platform": "GITHUB", "value": "Infrear", "icon": "github", "url": "https://github.com/Infrear" },
-      { "platform": "TWITTER / X", "value": "@Infrar4", "icon": "twitter", "url": "https://twitter.com/Infrar4" }
+      {
+        "platform": "DISCORD",
+        "value": "infrar.",
+        "icon": "discord",
+        "url": "https://discord.com"
+      },
+      {
+        "platform": "EMAIL",
+        "value": "obfrared@gmail.com",
+        "icon": "mail",
+        "url": "mailto:obfrared@gmail.com"
+      },
+      {
+        "platform": "ROBLOX",
+        "value": "dafferrelic842",
+        "icon": "gamepad",
+        "url": "https://www.roblox.com/users/235737325/profile"
+      },
+      {
+        "platform": "GITHUB",
+        "value": "Infrear",
+        "icon": "github",
+        "url": "https://github.com/Infrear"
+      },
+      {
+        "platform": "TWITTER / X",
+        "value": "@Infrar6",
+        "icon": "twitter",
+        "url": "https://twitter.com/Infrar6"
+      }
     ]
   },
   "videos": [
     {
-      "id": "vid-metanoia",
-      "title": "METANOIA - TOP 5% GROSSING GAME",
-      "category": "ROBLOX LUA / GAME ARCHITECTURE",
-      "description": "High-impact Roblox game project featuring modular netcode, optimized framework architecture, custom combat replication, and dynamic spatial HUD systems.",
-      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-      "poster": "./assets/zigzag background.png",
+      "id": "vid-1-persona-pvp",
+      "title": "PERSONA-STYLE PVP COMBAT SYSTEM",
+      "category": "ROBLOX LUA / COMBAT & UI",
+      "description": "Persona 5-Based PVP system featuring custom scripting, animations, and highly stylized GUI design.",
+      "videoUrl": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/metanoia fight.mp4",
+      "poster": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/posters/metanoia fight.png",
       "frameStyle": "frame1",
       "themeColor": "#E60012",
-      "x": 6,
-      "y": 14,
-      "rotation": -5,
+      "x": 8,
+      "y": 12,
+      "rotation": -4,
       "zIndex": 10,
-      "tags": ["ROBLOX LUA", "NETCODE", "TOP 5% GROSSING", "COMBAT ENGINE"]
+      "tags": [
+        "PVP",
+        "GUI",
+        "VFX"
+      ]
     },
     {
-      "id": "vid-blender",
-      "title": "BLENDER 3D COMBAT REEL",
-      "category": "BLENDER / CINEMATIC RIGGING",
-      "description": "Hyper-stylized character motion, keyframed attacks, dynamic camera framing, and custom particle effect timing designed for seamless game engine import.",
-      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-      "poster": "./assets/zigzag background.png",
+      "id": "vid-2-crystalgea",
+      "title": "CRYSTALGEA GAMEPLAY PROMO",
+      "category": "ROBLOX LUA / GAME ARCHITECTURE",
+      "description": "Comprehensive promotional video for Crystalgea showcasing the open-world scripting, quest system, dialogue, and UI entirely designed and animated by me.",
+      "videoUrl": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/crystalgea promo.mp4",
+      "poster": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/posters/crystalgea promo.png",
       "frameStyle": "frame2",
       "themeColor": "#111111",
-      "x": 48,
-      "y": 10,
+      "x": 55,
+      "y": 8,
       "rotation": 6,
-      "zIndex": 12,
-      "tags": ["BLENDER", "3D ANIMATION", "RIGGING", "PARTICLES"]
+      "zIndex": 11,
+      "tags": [
+        "OPEN-WORLD",
+        "QUEST-SYSTEM",
+        "DIALOGUE",
+        "GUI",
+        "CHARACTER CUSTOMIZATION"
+      ]
     },
     {
-      "id": "vid-robotics",
-      "title": "FTC COMPETITION ROBOTICS CONTROL",
-      "category": "FTC ROBOTICS / JAVA & C#",
-      "description": "Autonomous trajectory math, PID closed-loop feedback motor tuning, real-time sensor processing, and custom tele-operated drivers built for FTC robotics.",
-      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+      "id": "vid-3-blender-cutscene",
+      "title": "3D BLENDER GAME CUTSCENE",
+      "category": "BLENDER 3D / CINEMATICS",
+      "description": "Fully rendered and animated, 3D cinematic cutscene built from scratch for an upcoming game title.",
+      "videoUrl": "./new-assets/past-experience-images/metanoia/promotional-video.mp4",
+      "poster": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/posters/layla work.png",
+      "frameStyle": "frame1",
+      "themeColor": "#FFFFFF",
+      "x": 25,
+      "y": 35,
+      "rotation": -2,
+      "zIndex": 12,
+      "tags": [
+        "CUTSCENE",
+        "BLENDER"
+      ]
+    },
+    {
+      "id": "vid-4-zombie-pve",
+      "title": "ZOMBIE PVE SHOOTER ENGINE",
+      "category": "ROBLOX LUA / WEAPONS & MECHANICS",
+      "description": "Served as head scripter for this project, engineering the core gunplay mechanics, zombie logic, and user interface.",
+      "videoUrl": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/zombie task force.mp4",
+      "poster": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/posters/zombie task force.png",
+      "frameStyle": "frame2",
+      "themeColor": "#E60012",
+      "x": 68,
+      "y": 28,
+      "rotation": -7,
+      "zIndex": 13,
+      "tags": [
+        "PVE",
+        "ZOMBIE",
+        "GUNS"
+      ]
+    },
+    {
+      "id": "vid-5-pedestrian-ai",
+      "title": "OPTIMIZED PEDESTRIAN AI SYSTEM",
+      "category": "ROBLOX LUA / AI & OPTIMIZATION",
+      "description": "Highly optimized, Persona 5-inspired smart pedestrian and walking people system utilizing advanced math for server performance.",
+      "videoUrl": "",
       "poster": "./assets/zigzag background.png",
       "frameStyle": "frame1",
-      "themeColor": "#E60012",
-      "x": 18,
-      "y": 48,
-      "rotation": -4,
+      "themeColor": "#111111",
+      "x": 12,
+      "y": 60,
+      "rotation": 5,
       "zIndex": 14,
-      "tags": ["FTC ROBOTICS", "JAVA", "PID TUNING", "HARDWARE CONTROL"]
+      "tags": [
+        "MATHS",
+        "OPTIMIZATION",
+        "CUSTOM-HUMAN"
+      ]
     },
     {
-      "id": "vid-uisystems",
-      "title": "PERSONA-INSPIRED SPATIAL UI ENGINE",
-      "category": "ROBLOX LUA / INTERACTIVE FRONTEND",
-      "description": "Custom client-side UI rendering engine supporting spring-physics motion, dynamic screen slashes, angled masked containers, and custom canvas positioning.",
-      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-      "poster": "./assets/zigzag background.png",
+      "id": "vid-6-car-physics",
+      "title": "TRANSFORMER CAR PHYSICS",
+      "category": "ROBLOX LUA / VEHICLE PHYSICS",
+      "description": "Custom programmed vehicle physics and dynamic suspension system built specifically for a Transformer-style game.",
+      "videoUrl": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/full car physics and camera tracking showcase.mp4",
+      "poster": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/posters/full car physics and camera tracking showcase.png",
       "frameStyle": "frame2",
       "themeColor": "#FFFFFF",
-      "x": 62,
-      "y": 42,
-      "rotation": 7,
-      "zIndex": 11,
-      "tags": ["ROBLOX UI", "SPRING PHYSICS", "SPATIAL CANVAS", "LUA ENGINE"]
+      "x": 45,
+      "y": 55,
+      "rotation": -3,
+      "zIndex": 15,
+      "tags": [
+        "PHYSICS",
+        "CARS"
+      ]
     },
     {
-      "id": "vid-pipelinetools",
-      "title": "AUTOMATED BUILD & ASSET PIPELINE",
-      "category": "PYTHON / C# / AUTOMATION",
-      "description": "Tooling scripts for automated asset compression, map data serialization, build validation, and Roblox model syncing across multi-developer teams.",
-      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+      "id": "vid-7-camera-sys",
+      "title": "DYNAMIC CAMERA MANIPULATION",
+      "category": "ROBLOX LUA / CINEMATOGRAPHY",
+      "description": "Advanced camera movement and manipulation system driven by mathematical formulas to recreate the dynamic Persona 5 dialogue feel.",
+      "videoUrl": "",
       "poster": "./assets/zigzag background.png",
       "frameStyle": "frame1",
       "themeColor": "#E60012",
-      "x": 38,
-      "y": 74,
-      "rotation": -3,
-      "zIndex": 15,
-      "tags": ["PYTHON", "C#", "ASSET PIPELINES", "AUTOMATION"]
+      "x": 75,
+      "y": 50,
+      "rotation": 4,
+      "zIndex": 16,
+      "tags": [
+        "MATH",
+        "CAMERA-MANIPULATION",
+        "DIALOGUE"
+      ]
+    },
+    {
+      "id": "vid-8-survival-combat",
+      "title": "SURVIVAL PVP COMBAT FRAMEWORK",
+      "category": "ROBLOX LUA / GAME MECHANICS",
+      "description": "End-to-end simple combat framework for a PVP survival game, encompassing the scripting, character animations, and UI implementation.",
+      "videoUrl": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/survival game combat system.mp4",
+      "poster": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/posters/survival game combat system.png",
+      "frameStyle": "frame2",
+      "themeColor": "#111111",
+      "x": 5,
+      "y": 80,
+      "rotation": -6,
+      "zIndex": 17,
+      "tags": [
+        "PVP",
+        "GAME-MECHANIC"
+      ]
+    },
+    {
+      "id": "vid-9-persona-dialogue",
+      "title": "PERSONA DIALOGUE & DYNAMIC NPCS",
+      "category": "ROBLOX LUA / SYSTEMS & VFX",
+      "description": "Integrated Persona 5-style dialogue UI, custom NPC pathfinding, cinematic cutscenes, and ambient VFX including dropping clouds.",
+      "videoUrl": "",
+      "poster": "./assets/zigzag background.png",
+      "frameStyle": "frame1",
+      "themeColor": "#FFFFFF",
+      "x": 30,
+      "y": 75,
+      "rotation": 2,
+      "zIndex": 18,
+      "tags": [
+        "GUI",
+        "DIALOGUE",
+        "CUTSCENE",
+        "NPC",
+        "VFX",
+        "CUSTOM-HUMAN",
+        "PATHFINDING"
+      ]
+    },
+    {
+      "id": "vid-10-smooth-cutscene",
+      "title": "SMOOTH SCRIPTED CINEMATICS",
+      "category": "ROBLOX LUA / CINEMATICS",
+      "description": "Fluid and meticulously timed in-engine cutscene built utilizing advanced camera manipulation techniques.",
+      "videoUrl": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/cutscene.mp4",
+      "poster": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/posters/cutscene.png",
+      "frameStyle": "frame2",
+      "themeColor": "#E60012",
+      "x": 58,
+      "y": 82,
+      "rotation": -5,
+      "zIndex": 19,
+      "tags": [
+        "CUTSCENE",
+        "CAMERA-MANIPULATION"
+      ]
+    },
+    {
+      "id": "vid-11-story-intro",
+      "title": "STORY GAME INTRO SEQUENCE",
+      "category": "ROBLOX LUA / NARRATIVE DESIGN",
+      "description": "A complete opening narrative sequence for a story game, featuring synchronized GUI animations, dialogue progression, and fully scripted cutscenes.",
+      "videoUrl": "",
+      "poster": "./assets/zigzag background.png",
+      "frameStyle": "frame1",
+      "themeColor": "#111111",
+      "x": 82,
+      "y": 72,
+      "rotation": 7,
+      "zIndex": 20,
+      "tags": [
+        "GUI",
+        "DIALOGUE",
+        "CUTSCENE"
+      ]
+    },
+    {
+      "id": "vid-12-inventory",
+      "title": "OPEN WORLD INVENTORY SYSTEM",
+      "category": "ROBLOX LUA / DATA & UI",
+      "description": "Complex inventory architecture for an open-world survival game, handling robust data storing logic, item math, custom UI, and slot animations.",
+      "videoUrl": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/survival game inventory system.mp4",
+      "poster": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/posters/survival game inventory system.png",
+      "frameStyle": "frame2",
+      "themeColor": "#FFFFFF",
+      "x": 20,
+      "y": 18,
+      "rotation": -8,
+      "zIndex": 21,
+      "tags": [
+        "MATH",
+        "DATASTORING",
+        "UI-DESIGN"
+      ]
+    },
+    {
+      "id": "vid-13-monster-rig",
+      "title": "MONSTER RIGGING & ANIMATION",
+      "category": "BLENDER 3D / CREATURE DESIGN",
+      "description": "Custom armature rigging and keyframed creature animations designed to bring a monster model to life.",
+      "videoUrl": "",
+      "poster": "./assets/zigzag background.png",
+      "frameStyle": "frame1",
+      "themeColor": "#E60012",
+      "x": 40,
+      "y": 22,
+      "rotation": 3,
+      "zIndex": 22,
+      "tags": [
+        "RIGGING",
+        "CREATURE-ANIMATION"
+      ]
+    },
+    {
+      "id": "vid-14-pokemon-prototype",
+      "title": "MONSTER-CATCHING PROTOTYPE",
+      "category": "ROBLOX LUA / PROTOTYPING",
+      "description": "Archival footage showcasing the early development stages and mechanics of a Pokemon-inspired game concept.",
+      "videoUrl": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/moster fight.mp4",
+      "poster": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/posters/moster fight.png",
+      "frameStyle": "frame2",
+      "themeColor": "#111111",
+      "x": 65,
+      "y": 15,
+      "rotation": -4,
+      "zIndex": 23,
+      "tags": [
+        "OLDCLIP",
+        "CONCEPT",
+        "POKEMON"
+      ]
+    },
+    {
+      "id": "vid-15-planet-travel",
+      "title": "INTERPLANETARY TRAVEL SYSTEM",
+      "category": "ROBLOX LUA / PROTOTYPING",
+      "description": "A retro concept project featuring a functional planet-traveling mechanic designed for a Star Wars-themed experience.",
+      "videoUrl": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/more planet visiting.mp4",
+      "poster": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/posters/more planet visiting.png",
+      "frameStyle": "frame1",
+      "themeColor": "#FFFFFF",
+      "x": 10,
+      "y": 45,
+      "rotation": 8,
+      "zIndex": 24,
+      "tags": [
+        "OLDCLIP",
+        "CONCEPT"
+      ]
+    },
+    {
+      "id": "vid-16-rope-physics",
+      "title": "ALGEBRAIC ROPE RAPPEL MECHANIC",
+      "category": "ROBLOX LUA / PHYSICS & MATH",
+      "description": "Physics-driven grappling and rappel system built using algebraic formulas and dynamic rope constraints.",
+      "videoUrl": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/rapple.mp4",
+      "poster": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/posters/rapple.png",
+      "frameStyle": "frame2",
+      "themeColor": "#E60012",
+      "x": 35,
+      "y": 50,
+      "rotation": -5,
+      "zIndex": 25,
+      "tags": [
+        "OLDCLIP",
+        "MATH",
+        "GAME-MECHANIC"
+      ]
+    },
+    {
+      "id": "vid-17-anime-combat",
+      "title": "ANIME COMBAT REPLICATION",
+      "category": "BLENDER 3D / ANIMATION",
+      "description": "A fun commissioned side-project focused on accurately replicating high-speed combat animations and cutscenes from the Seven Deadly Sins anime.",
+      "videoUrl": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/sds anime animation.mp4",
+      "poster": "https://pub-46ee5b654930446683fa7f29608e9cd8.r2.dev/posters/sds anime animation.png",
+      "frameStyle": "frame1",
+      "themeColor": "#111111",
+      "x": 85,
+      "y": 38,
+      "rotation": 5,
+      "zIndex": 26,
+      "tags": [
+        "OLDCLIP",
+        "ASS",
+        "BULLSHIT",
+        "CUTSCENE"
+      ]
     }
   ],
   "experiences": [
     {
       "id": "exp-metanoia",
       "title": "METANOIA",
-      "role": "HEAD PROGRAMMER / CORE DEVELOPER",
+      "role": "HEAD PROGRAMMER / ANIMATOR",
       "dates": "In Development",
-      "description": "Developed highly optimized, object-oriented systems for a Top 5% grossing game.",
+      "description": "Developed highly optimized, object-oriented systems for an upcoming game based on the persona series.",
       "storeIcon": "./new-assets/past-experience-images/metanoia/store-icon.png",
       "inGameImage": "./new-assets/past-experience-images/metanoia/ingame-image.png",
       "promoImages": [],
       "promoVideo": "./new-assets/past-experience-images/metanoia/promotional-video.mp4"
     },
     {
-      "id": "exp-main-1",
-      "title": "MAIN EXPERIENCE: PART 1",
-      "role": "PROGRAMMER",
-      "dates": "Jun 2013 - Present",
-      "description": "Advanced pathfinding (over/underwater), mob A.I. Server-to-server joining/creation (style of Minecraft/Ark). Stat systems, inventories, and complex combat mechanics. Character creation, taming systems with saves, and custom skinned creatures.",
-      "storeIcon": "./assets/starwithcircle.png",
-      "inGameImage": "./assets/zigzag background.png",
-      "promoImages": [],
-      "promoVideo": null
-    },
-    {
-      "id": "exp-main-2",
-      "title": "MAIN EXPERIENCE: PART 2",
-      "role": "PROGRAMMER",
-      "dates": "Jun 2013 - Present",
-      "description": "Magic, utility enchantments, potions. Structures and vehicles. Procedural world generation with difficulty modes and animal health sensitivity.",
-      "storeIcon": "./assets/starwithoutline.png",
-      "inGameImage": "./assets/irregular zigzag.png",
-      "promoImages": [],
-      "promoVideo": null
+      "id": "exp-congressionalappchallenge",
+      "title": "CONGRESSIONAL APP CHALLENGE",
+      "descTextSize": "0.525rem",
+      "showPromoImageFirst": true,
+      "role": "PROGRAMMER & RESEARCHER",
+      "dates": "Aug - Oct 2024",
+      "description": "Developed 'Ecosense' App, utilizing YOLOv11 and Azure AI to identify species and analyze real-time USGS/EPA data. Awarded winner; received coverage in local news publications.",
+      "articleLink": "https://www.lowellsun.com/2024/12/26/trahan-celebrates-2024-congressional-app-challenge-winners/",
+      "storeIcon": "./new-assets/past-experience-images/congressional-app-challenge/congressionalseal.jpg",
+      "inGameImage": null,
+      "promoImages": [
+        "./new-assets/past-experience-images/congressional-app-challenge/congressional-app-challenge-coalition-vertical-2.png"
+      ],
+      "promoVideo": "https://www.youtube.com/watch?v=9Vvxeft4YZQ"
     },
     {
       "id": "exp-ztf",
       "title": "ZTF: RELOADED",
+      "showPromoImageFirst": true,
       "role": "PROGRAMMER",
       "dates": "Apr 2020 - Jan 2022",
       "description": "Main programmer for zombie effects, crate animation sequences, and UI effects.",
@@ -180,6 +461,17 @@
       "description": "Led development efforts for Crystalgea and managed studio programming pipelines.",
       "storeIcon": "./new-assets/past-experience-images/sky-imagination-studios/Sky imagination Studios Logo.png",
       "inGameImage": "./new-assets/past-experience-images/sky-imagination-studios/Sky imagination Studios Logo.png",
+      "promoImages": [],
+      "promoVideo": null
+    },
+    {
+      "id": "exp-main",
+      "title": "MAIN EXPERIENCE:",
+      "role": "PROGRAMMER",
+      "dates": "Jun 2013 - Present",
+      "description": "Advanced pathfinding (over/underwater), mob A.I. Server-to-server joining/creation (style of Minecraft/Ark). Stat systems, inventories, and complex combat mechanics. Character creation, taming systems with saves, and custom skinned creatures. Magic, utility enchantments, potions. Structures and vehicles. Procedural world generation with difficulty modes and animal health sensitivity.",
+      "storeIcon": "./assets/starwithoutline.png",
+      "inGameImage": "./assets/zigzag background.png",
       "promoImages": [],
       "promoVideo": null
     }
