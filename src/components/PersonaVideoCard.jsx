@@ -20,9 +20,9 @@ export default function PersonaVideoCard({
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const frameAsset = video.frameStyle === 'frame2'
-    ? './assets/persona frame 2.png'
-    : './assets/persona frame.png';
+  // const frameAsset = video.frameStyle === 'frame2'
+  //   ? './assets/persona frame 2.png'
+  //   : './assets/persona frame.png';
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -61,14 +61,14 @@ export default function PersonaVideoCard({
     >
       <div className="relative p-2 rounded-sm bg-black/90 border-2 border-white/20 shadow-[10px_10px_0px_#000000] hover:shadow-[14px_14px_0px_#E60012] transition-all duration-300 transform -skew-x-2">
 
-        <div className="absolute -inset-3 pointer-events-none z-20 opacity-90 transition-transform group-hover:scale-105">
+        {/* <div className="absolute -inset-3 pointer-events-none z-20 opacity-90 transition-transform group-hover:scale-105">
           <img
             src={frameAsset}
             alt="Persona Frame"
             className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(230,0,18,0.6)]"
             onError={(e) => { e.target.style.display = 'none'; }}
           />
-        </div>
+        </div> */}
 
         <div className="flex items-center justify-between bg-[#111111] px-3 py-1 mb-2 border-b-2 border-[#E60012]">
           <span className="text-[#E60012] text-xs font-bold tracking-widest uppercase flex items-center gap-1">

@@ -9,16 +9,24 @@ export default function ExperienceCard({ experience, isActive }) {
 
   // Combine inGameImage, promoImages, and promoVideo into a single media array for the carousel
   const mediaList = [];
+  
+  if (experience.showPromoImageFirst && experience.promoImages && experience.promoImages.length > 0) {
+    mediaList.push({ type: 'image', url: experience.promoImages[0] });
+  }
+
   if (experience.promoVideo) {
     mediaList.push({ type: 'video', url: experience.promoVideo });
   }
+
   if (experience.inGameImage) {
     mediaList.push({ type: 'image', url: experience.inGameImage });
   }
+
   if (experience.promoImages && experience.promoImages.length > 0) {
-    experience.promoImages.forEach(img => {
-      mediaList.push({ type: 'image', url: img });
-    });
+    const startIndex = experience.showPromoImageFirst ? 1 : 0;
+    for (let i = startIndex; i < experience.promoImages.length; i++) {
+      mediaList.push({ type: 'image', url: experience.promoImages[i] });
+    }
   }
 
   const nextMedia = () => {
@@ -61,22 +69,39 @@ export default function ExperienceCard({ experience, isActive }) {
               className="absolute inset-0 w-full h-full"
             >
               {currentMedia.type === 'video' ? (
-                <>
-                  <video
-                    ref={videoRef}
-                    src={currentMedia.url}
-                    autoPlay
-                    loop
-                    muted
-                    className="w-full h-full object-cover"
-                  />
-                  <button
-                    onClick={toggleVideo}
-                    className="absolute bottom-2 left-2 bg-[#E60012] text-white p-2 border border-white z-10"
-                  >
-                    {isPlaying ? <Pause size={16} /> : <Play size={16} />}
-                  </button>
-                </>
+                currentMedia.url.includes('youtube.com') || currentMedia.url.includes('youtu.be') ? (
+                  (() => {
+                    const match = currentMedia.url.match(/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/);
+                    const videoId = (match && match[2].length === 11) ? match[2] : '';
+                    return (
+                      <iframe
+                        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}`}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full object-cover pointer-events-auto"
+                      ></iframe>
+                    );
+                  })()
+                ) : (
+                  <>
+                    <video
+                      ref={videoRef}
+                      src={currentMedia.url}
+                      autoPlay
+                      loop
+                      muted
+                      className="w-full h-full object-cover"
+                    />
+                    <button
+                      onClick={toggleVideo}
+                      className="absolute bottom-2 left-2 bg-[#E60012] text-white p-2 border border-white z-10"
+                    >
+                      {isPlaying ? <Pause size={16} /> : <Play size={16} />}
+                    </button>
+                  </>
+                )
               ) : (
                 <img
                   src={currentMedia.url}
@@ -130,9 +155,14 @@ export default function ExperienceCard({ experience, isActive }) {
             <span className="inline-block bg-[#E60012] text-white text-[8px] md:text-[10px] font-bold px-1.5 md:px-2 py-0.5 mb-1 md:mb-2 uppercase tracking-widest border border-white">
               {experience.dates}
             </span>
-            <p className="text-white/90 text-xs md:text-sm leading-relaxed">
+            <p className="text-white/90 text-xs md:text-sm leading-relaxed whitespace-pre-line" style={{ fontSize: experience.descTextSize }}>
               {experience.description}
             </p>
+            {experience.articleLink && (
+              <a href={experience.articleLink} target="_blank" rel="noreferrer" className="text-[#E60012] hover:underline text-xs md:text-sm mt-3 block font-bold" style={{ fontFamily: "'Persona Aura', sans-serif" }}>
+                VIEW ARTICLE
+              </a>
+            )}
           </div>
         </div>
 

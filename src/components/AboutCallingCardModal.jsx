@@ -8,7 +8,7 @@ export default function AboutCallingCardModal({ profile, isOpen, onClose }) {
   return (
     <AnimatePresence>
       <div className="fixed inset-0 z-[9000] flex items-center justify-center p-4 md:p-8 bg-black/80 backdrop-blur-md">
-        
+
         {/* Fullscreen Backdrop Close Trigger */}
         <div className="absolute inset-0" onClick={onClose} />
 
@@ -27,7 +27,7 @@ export default function AboutCallingCardModal({ profile, isOpen, onClose }) {
               style={{ fontFamily: "'Persona Aura', sans-serif" }}
             >
               <Trophy className="w-4 h-4 md:w-5 md:h-5 text-white" />
-              CALLING CARD // TARGET: OBI
+              CALLING CARD
             </span>
 
             <button
@@ -40,17 +40,16 @@ export default function AboutCallingCardModal({ profile, isOpen, onClose }) {
 
           {/* Modal Main Content Layout */}
           <div className="mt-14 md:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-start">
-            
+
             {/* Left Character Bio & Avatar Card */}
             <div className="lg:col-span-5 flex flex-col items-center text-center bg-[#111111] p-4 md:p-6 border-2 border-white/20 transform -skew-x-3 shadow-[6px_6px_0px_#E60012] md:shadow-[8px_8px_0px_#E60012]">
               <div className="relative w-24 h-24 md:w-44 md:h-44 bg-[#E60012] border-4 border-white transform -rotate-3 overflow-hidden shadow-[4px_4px_0px_#000000] md:shadow-[6px_6px_0px_#000000] flex items-center justify-center">
-                {/* Character Silhouette / Icon */}
-                <div className="flex flex-col items-center justify-center text-white">
-                  <Terminal className="w-10 h-10 md:w-20 md:h-20 filter drop-shadow-[0_0_8px_#FFF]" />
-                  <span className="font-black text-lg md:text-2xl tracking-tighter mt-1" style={{ fontFamily: "'Persona Aura', sans-serif" }}>
-                    OBI
-                  </span>
-                </div>
+                {/* Character Photo */}
+                <img
+                  src="./new-assets/yaboi/headshot.jpg"
+                  alt="Obi Profile"
+                  className="w-full h-full object-cover transform rotate-3 scale-110"
+                />
               </div>
 
               <h2
@@ -78,11 +77,11 @@ export default function AboutCallingCardModal({ profile, isOpen, onClose }) {
 
             {/* Right Detailed Bio & Stats Grid */}
             <div className="lg:col-span-7 flex flex-col justify-between">
-              
+
               {/* Persona Chatbox Styled Dialog Container */}
               <div className="relative bg-[#1a1a1a] p-4 md:p-6 border-2 border-[#E60012] shadow-[4px_4px_0px_#000] md:shadow-[6px_6px_0px_#000]">
                 <div className="absolute -top-3 left-4 bg-[#E60012] px-2 py-0.5 text-white font-bold text-[10px] tracking-widest uppercase border border-white">
-                  CONFIDENTIAL DOSSIER
+                  ABOUT ME
                 </div>
                 <p className="text-white/95 text-xs md:text-base leading-relaxed font-sans mt-2 md:mt-1">
                   "{profile.bio}"

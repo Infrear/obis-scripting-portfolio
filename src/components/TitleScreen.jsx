@@ -24,6 +24,13 @@ export default function TitleScreen({ onSelectPastWork, onSelectExperiences, onO
         </motion.button>
       </div>
 
+      {/* Bottom Left Text */}
+      <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 z-50 pointer-events-none">
+        <p className="text-white/40 italic text-xs md:text-sm tracking-wide">
+          yes i made this website
+        </p>
+      </div>
+
       <div className="relative flex flex-col items-center" style={{ marginTop: 'clamp(-4rem, -8vh, -1rem)' }}>
 
         {/* Main Floating Textbox Graphic */}
