@@ -48,7 +48,7 @@ export default function AboutCallingCardModal({ profile, isOpen, onClose }) {
                 <img
                   src="./new-assets/yaboi/headshot.jpg"
                   alt="Obi Profile"
-                  className="w-full h-full object-cover transform rotate-3 scale-110"
+                  className="w-full h-full object-cover transform rotate-3 skew-x-6 scale-110"
                 />
               </div>
 
